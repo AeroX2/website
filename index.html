@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>James Ridey</title>
+    <meta name="author" content="James Ridey">
+    <meta name="description" content="Personal website about James Ridey">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.2/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.2/devicon-colors.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+  </head>
+  <style>
+    .list-no-space {
+      margin-bottom: 0;
+    }
+
+    .list-no-space li {
+      margin-bottom: 0;
+    }
+
+    .list-no-points {
+      list-style-type: none;
+    }
+
+    .timeline {
+      display: flex;
+    }
+
+    .timeline-item {
+      flex: 1;
+    }
+
+    .timeline-top {
+      padding: 5px;
+      text-align: center; 
+    }
+
+    .timeline-bottom {
+      display: flex;
+      justify-content: center;
+      padding: 10px 5px 5px 5px;
+      position: relative;
+      border-top: 3px solid green;
+    }
+
+    .timeline-bottom::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: -12px;
+      border-radius: 100%;
+      background-color: green;
+    }
+
+    .card-row {
+      display: flex;
+      overflow-x: scroll;
+      perspective: 1000px;
+    }
+
+    .card {
+      flex: 0 0 20em;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      background-color: lightgrey;
+
+      /* center */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, card-back {
+      backface-visibility: hidden;
+      position: absolute;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-front {
+      width: 100%;
+      z-index: 2;
+      /* for firefox 31 */
+      transform: rotateY(0deg);
+    }
+
+    .card-back {
+      width: 100%;
+      transform: rotateY(180deg);
+    }
+
+    .fa-star {
+      color: #FFD700;
+      text-shadow: 0 0 3px #000;
+      padding-right: 5px;
+    }
+
+    .star-list {
+      text-align: left;
+      max-width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="row" style="margin-top: 25%">
+        <div class="one-half column">
+          <h1>Hi, I'm James Ridey</h1>
+
+          I'm a<br/>
+          <ul class="list-no-space">
+            <li><b>Software Engineer</b></li>
+            <li><b>Programmer</b></li>
+            <li><b>Engineer</b></li>
+            <li><b>Hacker</b></li>
+            <li><b>Tinkerer</b></li>
+          </ul>
+          In other words, I build things, 
+          including this website which is currently running on AWS, built from the ground up and supports HTTPS/2
+        </div>
+        <div class="one-half column">
+          <h3>About me:</h3>
+          <p>
+          I'm a Macquarie University student who has always been deeply passionate about technology and always looking into how things work.
+          This quality about me has allowed me to pursue multiple ventures in computer science from learning multiple programming languages, 
+          learning how computers work all the way from high level concepts like multithreading and concurrency to the barebones logic gates and
+          also learning about how to create secure systems through my dabbling in reverse engineering and cyber security.
+          </p>
+          <p>
+          In my pursuit for knowledge, I've worked on quite a number of pet projects, each with the goal of learning something new, some of these include
+          a portable Raspberry Pi gaming system with custom circuitry, custom 3D printed shell and a modified set of C drivers for the buttons, an 8-bit computer built from the ground up from logic gates and a
+          machine learning neural network trained through genetic algorithms.
+          </p>
+          <!--Lastly I've participated in FIRST robotics (an international robotics competition where a team of students are tasked with building a robot to complete a provided challenge) as part of Team 3132 ThunderDownUnder where I coded the robot control system as well as parts of the team's website. 
+            The robot is a remote controlled 50kg hunk of machined steel and uses a custom Linux board which runs Java. In 2015, the robot we built in six weeks came 2nd out of the 30 robots in the finals or 2nd out of 3236 teams. -->
+          </p>
+        </div>
+      </div>
+      <h3>TLDR;</h3>
+      <h6>Or the buzzwords section</h6>
+      <div class="row">
+        <div class="one-third column">
+          <h5>I've worked with these languages in the workforce,</h5>
+          <ul>
+            <li><i class="devicon-nodejs-plain colored"></i> NodeJS</li>
+            <li><i class="devicon-csharp-plain colored"></i> C#</li>
+            <li><i class="devicon-javascript-plain colored"></i> Javascript</li>
+            <li><i class="devicon-typescript-plain colored"></i> Typescript</li>
+            <li><i class="devicon-angularjs-plain colored"></i> Angular 2</li>
+          </ul>
+        </div>
+        <div class="one-third column">
+          <h5>I have experience with these languages through hobbies and other ventures</h5>
+          <ul>
+            <li><i class="devicon-cplusplus-plain colored"></i> C++</li>
+            <li><i class="devicon-python-plain colored"></i> Python</li>
+            <li><i class="devicon-java-plain colored"></i> Java</li>
+          </ul>
+        </div>
+        <div class="one-third column">
+          <h5>And I have knowledge of these</h5>
+          <ul>
+            <li>Datastructures</li>
+            <li>Algorithms</li>
+            <li>Reverse engineering</li>
+            <li>Cyber security</li>
+            <li>Design patterns</li>
+            <li>Web networking</li>
+            <li>Machine learning</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <h3>Timeline:</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-top">2014</div>
+            <div class="timeline-bottom">
+              Thoughtdesign
+            </div>
+            <!--<div class="timeline-desc">
+              Lorem impsume
+              </div>-->
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-top">2014</div>
+            <div class="timeline-bottom">
+              <p>Thoughtdesign #1</p>
+            </div>
+            <!--<div class="timeline-desc">
+              Lorem impsume
+              </div>-->
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-top">2014</div>
+            <div class="timeline-bottom">
+              Google internship #1
+            </div>
+            <!--<div class="timeline-desc">
+              Lorem impsume
+              </div>-->
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-top">2014</div>
+            <div class="timeline-bottom">
+              Google internship #2
+            </div>
+            <!--<div class="timeline-desc">
+              Lorem impsume
+              </div>-->
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3>Competitions:</h3>
+        <div class="row card-row">
+          <div class="card">
+            <div class="card-front">
+              <h5>FlareOn 2019</h5>
+              <div class="star-list">
+                <ul class="list-no-space list-no-points">
+                  <li><i class="fa fa-star"></i>Rank 326/3234 individuals<br/>(11/12 questions solved)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>"A Windows-centric reverse engineering CTF contest that features a total of 12 challenges covering a variety of architectures from x86 on Windows, .NET, Linux, Android and for 2019 a NES ROM challenge."</p>
+              <p>This competition revolves around reverse engineering malicious samples, mainly Windows, figuring out how they work and finding a certain flag in order to proceed to the next question.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <h5>CySCA 2018 Melbourne</h5>
+              <div class="star-list">
+                <ul class="list-no-space list-no-points">
+                  <li><i class="fa fa-star"></i>Rank 15/108 teams</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>"CySCA is a hacking competition run by an alliance of Australian Government, business and academic professionals who are committed to finding the next generation of Australian cyber security talent."</p>
+              <p>The competition involves breaking into Boot2Root machines and finding various web exploits, design flaws and general security vulnerabilities.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <h5>ASEAN Australia Codeathon 2018</h5>
+              <div class="star-list">
+                <ul class="list-no-space list-no-points">
+                <li><i class="fa fa-star"></i>Overall runner up</li>
+                <li><i class="fa fa-star"></i>Applying Blockchain Technology winner</li>
+              </ul>
+            </div>
+            </div>
+            <div class="card-back">
+              <p>"Over 32 hours, the Codeathon will bring together financial intelligence units (FIUs), banks, developers, innovators and other partners from across Australia and ASEAN countries to engage with and construct innovative digital solutions to curb terrorism financing and enhance cyber security."</p>
+              <p>A codeathon competition with the goal of coming up with a solution to complex issues regarding terrorism financing and cyber security.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <h5>Hack Mac 2017</h5>
+              <div class="star-list">
+                <ul class="list-no-space list-no-points">
+                  <li><i class="fa fa-star"></i>1<span style="font-height: 50%">st</span> - Won a trip to AusCERT (Yearly cybersecurity conference held in Queensland)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>"Macquarie University IT has designed and built hacking challenges for Macquarie University undergraduate students."</p>
+              <p>A hacking competition based purely around Boot2Root machines, the competition also allows students to try and break into official Macquarie services and be awarded points.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-front">
+              <h5>USYD NCSS Python programming challenge</h5>
+              <div class="star-list">
+                <ul class="list-no-space list-no-points">
+                  <li><i class="fa fa-star"></i>2014 - Advanced - Perfect score</li>
+                  <li><i class="fa fa-star"></i>2013 - Advanced - Perfect score</li>
+                  <li><i class="fa fa-star"></i>2012 - Intermediate - Perfect score</li>
+                  <li><i class="fa fa-star"></i>2011 - Advanced - Credit</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>"The NCSS Challenge is a programming competition open to all school students and teachers. The Grok Learning team have been running coding competitions like the challenge for over 12 years."</p>
+              <p>A python programming challenge which runs for 5 weeks, each week a set of questions are released and students have until the end of the week to complete.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

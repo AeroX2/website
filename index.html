@@ -1,255 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>James Ridey</title>
-    <meta name="author" content="James Ridey">
-    <meta name="description" content="Personal website about James Ridey">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+<head>
+  <meta charset="utf-8">
+  <title>James Ridey</title>
+  <meta name="author" content="James Ridey">
+  <meta name="description" content="Personal website about James Ridey">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.2/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.2/devicon-colors.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-    <link rel="icon" type="image/png" href="images/favicon.png">
-  </head>
-  <style>
-    .list-no-space {
-      margin-bottom: 0;
-    }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.2/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.2/devicon-colors.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    .list-no-space li {
-      margin-bottom: 0;
-    }
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/social.css">
 
-    .list-no-points {
-      list-style-type: none;
-    }
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+</head>
 
-    .timeline {
-      display: flex;
-    }
+<body>
+  <div class="container">
+    <div class="row" style="margin-top: 25%">
+      <div class="one-half column">
+        <h1>Hi, I'm James Ridey</h1>
 
-    .timeline-item {
-      flex: 1;
-    }
-
-    .timeline-top {
-      padding: 5px;
-      text-align: center; 
-    }
-
-    .timeline-bottom {
-      display: flex;
-      justify-content: center;
-      padding: 10px 5px 5px 5px;
-      position: relative;
-      border-top: 3px solid green;
-    }
-
-    .timeline-bottom::before {
-      content: "";
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      top: -12px;
-      border-radius: 100%;
-      background-color: green;
-    }
-
-    .card-row {
-      display: flex;
-      overflow-x: scroll;
-      perspective: 1000px;
-    }
-
-    .card {
-      flex: 0 0 20em;
-      padding: 10px;
-      margin: 10px;
-      border-radius: 10px;
-      background-color: lightgrey;
-
-      /* center */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-
-      transition: transform 1s;
-      transform-style: preserve-3d;
-    }
-
-    .card:hover {
-      transform: rotateY(180deg);
-    }
-
-    .card-front, card-back {
-      backface-visibility: hidden;
-      position: absolute;
-
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-front {
-      width: 100%;
-      z-index: 2;
-      /* for firefox 31 */
-      transform: rotateY(0deg);
-    }
-
-    .card-back {
-      width: 100%;
-      transform: rotateY(180deg);
-    }
-
-    .fa-star {
-      color: #FFD700;
-      text-shadow: 0 0 3px #000;
-      padding-right: 5px;
-    }
-
-    .star-list {
-      text-align: left;
-      max-width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
-  <body>
-    <div class="container">
-      <div class="row" style="margin-top: 25%">
-        <div class="one-half column">
-          <h1>Hi, I'm James Ridey</h1>
-
-          I'm a<br/>
-          <ul class="list-no-space">
-            <li><b>Software Engineer</b></li>
-            <li><b>Programmer</b></li>
-            <li><b>Engineer</b></li>
-            <li><b>Hacker</b></li>
-            <li><b>Tinkerer</b></li>
-          </ul>
-          In other words, I build things, 
-          including this website which was built from the ground up using <a href="http://getskeleton.com/">Skeleton</a> and a sprinkle of Javascript
-        </div>
-        <div class="one-half column">
-          <h3>About me:</h3>
-          <p>
-          I'm a Macquarie University student who has always been deeply passionate about technology and always looking into how things work.
-          This quality about me has allowed me to pursue multiple ventures in computer science from learning multiple programming languages, 
-          learning how computers work all the way from high level concepts like multithreading and concurrency to the barebones logic gates and
-          also learning about how to create secure systems through my dabbling in reverse engineering and cyber security.
-          </p>
-          <p>
-          In my pursuit for knowledge, I've worked on quite a number of pet projects, each with the goal of learning something new, some of these include
-          a portable Raspberry Pi gaming system with custom circuitry, custom 3D printed shell and a modified set of C drivers for the buttons, an 8-bit computer built from the ground up from logic gates and a
+        I'm a<br />
+        <ul class="list-no-space">
+          <li><b>Software Engineer</b></li>
+          <li><b>Programmer</b></li>
+          <li><b>Engineer</b></li>
+          <li><b>Hacker</b></li>
+          <li><b>Tinkerer</b></li>
+        </ul>
+        In other words, I build things,
+        including this website which was built from the ground up using <a href="http://getskeleton.com/">Skeleton</a>
+        and a sprinkle of Javascript
+      </div>
+      <div class="one-half column">
+        <h3>About me:</h3>
+        <p>
+          I'm a Macquarie University student who has always been deeply passionate about technology and always looking
+          into how things work.
+          This quality about me has allowed me to pursue multiple ventures in computer science from learning multiple
+          programming languages,
+          learning how computers work all the way from high level concepts like multithreading and concurrency to the
+          barebones logic gates and
+          also learning about how to create secure systems through my dabbling in reverse engineering and cyber
+          security.
+        </p>
+        <p>
+          In my pursuit for knowledge, I've worked on quite a number of pet projects, each with the goal of learning
+          something new, some of these include
+          a portable Raspberry Pi gaming system with custom circuitry, custom 3D printed shell and a modified set of C
+          drivers for the buttons, an 8-bit computer built from the ground up from logic gates and a
           machine learning neural network trained through genetic algorithms.
-          </p>
-          <!--Lastly I've participated in FIRST robotics (an international robotics competition where a team of students are tasked with building a robot to complete a provided challenge) as part of Team 3132 ThunderDownUnder where I coded the robot control system as well as parts of the team's website. 
+        </p>
+        <!--Lastly I've participated in FIRST robotics (an international robotics competition where a team of students are tasked with building a robot to complete a provided challenge) as part of Team 3132 ThunderDownUnder where I coded the robot control system as well as parts of the team's website. 
             The robot is a remote controlled 50kg hunk of machined steel and uses a custom Linux board which runs Java. In 2015, the robot we built in six weeks came 2nd out of the 30 robots in the finals or 2nd out of 3236 teams. -->
-          </p>
-        </div>
+        </p>
       </div>
-      <h3>TLDR;</h3>
-      <h6>Or the buzzwords section</h6>
-      <div class="row">
-        <div class="one-third column">
-          <h5>I've worked with these languages in the workforce,</h5>
-          <ul>
-            <li><i class="devicon-nodejs-plain colored"></i> NodeJS</li>
-            <li><i class="devicon-csharp-plain colored"></i> C#</li>
-            <li><i class="devicon-javascript-plain colored"></i> Javascript</li>
-            <li><i class="devicon-typescript-plain colored"></i> Typescript</li>
-            <li><i class="devicon-angularjs-plain colored"></i> Angular 2</li>
-          </ul>
-        </div>
-        <div class="one-third column">
-          <h5>I have experience with these languages through hobbies and other ventures</h5>
-          <ul>
-            <li><i class="devicon-cplusplus-plain colored"></i> C++</li>
-            <li><i class="devicon-python-plain colored"></i> Python</li>
-            <li><i class="devicon-java-plain colored"></i> Java</li>
-          </ul>
-        </div>
-        <div class="one-third column">
-          <h5>And I have knowledge of these</h5>
-          <ul>
-            <li>Datastructures</li>
-            <li>Algorithms</li>
-            <li>Reverse engineering</li>
-            <li>Cyber security</li>
-            <li>Design patterns</li>
-            <li>Web networking</li>
-            <li>Machine learning</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <h3>Timeline:</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-top">2014</div>
-            <div class="timeline-bottom">
-              Thoughtdesign
-            </div>
-            <!--<div class="timeline-desc">
-              Lorem impsume
-              </div>-->
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-top">2014</div>
-            <div class="timeline-bottom">
-              <p>Thoughtdesign #1</p>
-            </div>
-            <!--<div class="timeline-desc">
-              Lorem impsume
-              </div>-->
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-top">2014</div>
-            <div class="timeline-bottom">
-              Google internship #1
-            </div>
-            <!--<div class="timeline-desc">
-              Lorem impsume
-              </div>-->
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-top">2014</div>
-            <div class="timeline-bottom">
-              Google internship #2
-            </div>
-            <!--<div class="timeline-desc">
-              Lorem impsume
-              </div>-->
-          </div>
-        </div>
-      </div>
+    </div>
 
-      <div class="row">
-        <h3>Competitions:</h3>
-        <div class="row card-row">
+    <h3>TLDR;</h3>
+    <h6>Or the buzzwords section</h6>
+    <div class="row">
+      <div class="one-third column">
+        <h5>I've worked with these languages in the workforce,</h5>
+        <ul>
+          <li><i class="devicon-nodejs-plain colored"></i> NodeJS</li>
+          <li><i class="devicon-csharp-plain colored"></i> C#</li>
+          <li><i class="devicon-javascript-plain colored"></i> Javascript</li>
+          <li><i class="devicon-typescript-plain colored"></i> Typescript</li>
+          <li><i class="devicon-angularjs-plain colored"></i> Angular 2</li>
+        </ul>
+      </div>
+      <div class="one-third column">
+        <h5>I have experience with these languages through hobbies and other ventures</h5>
+        <ul>
+          <li><i class="devicon-cplusplus-plain colored"></i> C++</li>
+          <li><i class="devicon-python-plain colored"></i> Python</li>
+          <li><i class="devicon-java-plain colored"></i> Java</li>
+          <li><i class="devicon-android-plain colored"></i> Android (Java)</li>
+          <li><i class="devicon-intellij-plain colored"></i> Kotlin</li>
+        </ul>
+      </div>
+      <div class="one-third column">
+        <h5>And I have knowledge of these</h5>
+        <ul>
+          <li>Datastructures</li>
+          <li>Algorithms</li>
+          <li>Reverse engineering</li>
+          <li>Cyber security</li>
+          <li>Design patterns</li>
+          <li>Web networking</li>
+          <li>Machine learning</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3>Timeline:</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-top">2014</div>
+          <div class="timeline-bottom">
+            Thoughtdesign
+          </div>
+          <!--<div class="timeline-desc">
+              Lorem impsume
+              </div>-->
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-top">2014</div>
+          <div class="timeline-bottom">
+            <p>Thoughtdesign #1</p>
+          </div>
+          <!--<div class="timeline-desc">
+              Lorem impsume
+              </div>-->
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-top">2014</div>
+          <div class="timeline-bottom">
+            Google internship #1
+          </div>
+          <!--<div class="timeline-desc">
+              Lorem impsume
+              </div>-->
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-top">2014</div>
+          <div class="timeline-bottom">
+            Google internship #2
+          </div>
+          <!--<div class="timeline-desc">
+              Lorem impsume
+              </div>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3>Competitions:</h3>
+      <div class="row card-row">
+        <div class="card-container" ontouchstart="this.classList.toggle('hover');">
           <div class="card">
+            <div class="card-background" style="--background: url('../images/flareon.png')"></div>
             <div class="card-front">
               <h5>FlareOn 2019</h5>
               <div class="star-list">
                 <ul class="list-no-space list-no-points">
-                  <li><i class="fa fa-star"></i>Rank 326/3234 individuals<br/>(11/12 questions solved)</li>
+                  <li><i class="fa fa-star"></i>Rank 326/3234 individuals<br />(11/12 questions solved)</li>
                 </ul>
               </div>
             </div>
             <div class="card-back">
-              <p>"A Windows-centric reverse engineering CTF contest that features a total of 12 challenges covering a variety of architectures from x86 on Windows, .NET, Linux, Android and for 2019 a NES ROM challenge."</p>
-              <p>This competition revolves around reverse engineering malicious samples, mainly Windows, figuring out how they work and finding a certain flag in order to proceed to the next question.</p>
+              <p>"A Windows-centric reverse engineering CTF contest that features a total of 12 challenges covering a
+                variety of architectures from x86 on Windows, .NET, Linux, Android and for 2019 a NES ROM challenge."
+              </p>
+              <p>This competition revolves around reverse engineering malicious samples, mainly Windows, figuring out
+                how
+                they work and finding a certain flag in order to proceed to the next question.</p>
             </div>
           </div>
+        </div>
+        <div class="card-container" ontouchstart="this.classList.toggle('hover');">
           <div class="card">
+            <div class="card-background" style="--background: url('../images/cysca.png')"></div>
             <div class="card-front">
               <h5>CySCA 2018 Melbourne</h5>
               <div class="star-list">
@@ -259,40 +183,63 @@
               </div>
             </div>
             <div class="card-back">
-              <p>"CySCA is a hacking competition run by an alliance of Australian Government, business and academic professionals who are committed to finding the next generation of Australian cyber security talent."</p>
-              <p>The competition involves breaking into Boot2Root machines and finding various web exploits, design flaws and general security vulnerabilities.</p>
+              <p>"CySCA is a hacking competition run by an alliance of Australian Government, business and academic
+                professionals who are committed to finding the next generation of Australian cyber security talent."</p>
+              <p>The competition involves breaking into Boot2Root machines and finding various web exploits, design
+                flaws
+                and general security vulnerabilities.</p>
             </div>
           </div>
+        </div>
+        <div class="card-container" ontouchstart="this.classList.toggle('hover');">
           <div class="card">
+            <div class="card-background" style="--background: url('../images/asean.jpg')"></div>
             <div class="card-front">
               <h5>ASEAN Australia Codeathon 2018</h5>
               <div class="star-list">
                 <ul class="list-no-space list-no-points">
-                <li><i class="fa fa-star"></i>Overall runner up</li>
-                <li><i class="fa fa-star"></i>Applying Blockchain Technology winner</li>
-              </ul>
-            </div>
-            </div>
-            <div class="card-back">
-              <p>"Over 32 hours, the Codeathon will bring together financial intelligence units (FIUs), banks, developers, innovators and other partners from across Australia and ASEAN countries to engage with and construct innovative digital solutions to curb terrorism financing and enhance cyber security."</p>
-              <p>A codeathon competition with the goal of coming up with a solution to complex issues regarding terrorism financing and cyber security.</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-front">
-              <h5>Hack Mac 2017</h5>
-              <div class="star-list">
-                <ul class="list-no-space list-no-points">
-                  <li><i class="fa fa-star"></i>1<span style="font-height: 50%">st</span> - Won a trip to AusCERT (Yearly cybersecurity conference held in Queensland)</li>
+                  <li><i class="fa fa-star"></i>Overall runner up</li>
+                  <li><i class="fa fa-star"></i>Applying Blockchain Technology winner</li>
                 </ul>
               </div>
             </div>
             <div class="card-back">
-              <p>"Macquarie University IT has designed and built hacking challenges for Macquarie University undergraduate students."</p>
-              <p>A hacking competition based purely around Boot2Root machines, the competition also allows students to try and break into official Macquarie services and be awarded points.</p>
+              <p>"Over 32 hours, the Codeathon will bring together financial intelligence units (FIUs), banks,
+                developers,
+                innovators and other partners from across Australia and ASEAN countries to engage with and construct
+                innovative digital solutions to curb terrorism financing and enhance cyber security."</p>
+              <p>A codeathon competition with the goal of coming up with a solution to complex issues regarding
+                terrorism
+                financing and cyber security.</p>
             </div>
           </div>
+        </div>
+        <div class="card-container" ontouchstart="this.classList.toggle('hover');">
           <div class="card">
+            <div class="card-background" style="--background: url('../images/hackmac.png')"></div>
+            <div class="card-front">
+              <h5>Hack Mac 2017</h5>
+              <div class="star-list">
+                <ul class="list-no-space list-no-points">
+                  <li><i class="fa fa-star"></i>1<span style="font-size: 80%">st</span> - Won a trip to AusCERT
+                    (Yearly
+                    cybersecurity conference held in Queensland)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-back">
+              <p>"Macquarie University IT has designed and built hacking challenges for Macquarie University
+                undergraduate
+                students."</p>
+              <p>A hacking competition based purely around Boot2Root machines, the competition also allows students to
+                try
+                and break into official Macquarie services and be awarded points.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="card">
+            <div class="card-background" style="--background: url('../images/ncss.png')"></div>
             <div class="card-front">
               <h5>USYD NCSS Python programming challenge</h5>
               <div class="star-list">
@@ -305,12 +252,72 @@
               </div>
             </div>
             <div class="card-back">
-              <p>"The NCSS Challenge is a programming competition open to all school students and teachers. The Grok Learning team have been running coding competitions like the challenge for over 12 years."</p>
-              <p>A python programming challenge which runs for 5 weeks, each week a set of questions are released and students have until the end of the week to complete.</p>
+              <p>"The NCSS Challenge is a programming competition open to all school students and teachers. The Grok
+                Learning team have been running coding competitions like the challenge for over 12 years."</p>
+              <p>A python programming challenge which runs for 5 weeks, each week a set of questions are released and
+                students have until the end of the week to complete.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+
+    <div class="row">
+      <h3>Contact</h3>
+      <div class="column">
+        <!-- Sharingbutton Facebook -->
+        <a class="resp-sharing-button__link" href="https://facebook.com/james.ridey" target="_blank" rel="noopener"
+          aria-label="">
+          <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+              </svg>
+            </div>
+          </div>
+        </a>
+        <!-- Sharingbutton E-Mail -->
+        <a class="resp-sharing-button__link" href="mailto:james" target="_self" rel="noopener" aria-label="">
+          <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small">
+            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z" />
+              </svg>
+            </div>
+          </div>
+        </a>
+        <!-- Sharingbutton LinkedIn -->
+        <a class="resp-sharing-button__link" href="https://www.linkedin.com/" target="_blank" rel="noopener"
+          aria-label="">
+          <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small">
+            <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z" />
+              </svg>
+            </div>
+          </div>
+        </a>
+        </a>
+      </div>
+    </div>
+
+    <div class="row konami">
+      <div style="text-align: center">
+        <i class="fa fa-arrow-circle-up"></i>
+        <i class="fa fa-arrow-circle-up"></i>
+        <i class="fa fa-arrow-circle-down"></i>
+        <i class="fa fa-arrow-circle-down"></i>
+        <i class="fa fa-arrow-circle-left"></i>
+        <i class="fa fa-arrow-circle-right"></i>
+        <i class="fa fa-arrow-circle-left"></i>
+        <i class="fa fa-arrow-circle-right"></i>
+        B A
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

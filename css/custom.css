@@ -1,0 +1,118 @@
+.list-no-space {
+    margin-bottom: 0;
+}
+
+.list-no-space li {
+    margin-bottom: 0;
+}
+
+.list-no-points {
+    list-style-type: none;
+}
+
+.timeline {
+    display: flex;
+}
+
+.timeline-item {
+    flex: 1;
+}
+
+.timeline-top {
+    padding: 5px;
+    text-align: center; 
+}
+
+.timeline-bottom {
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px 5px 5px;
+    position: relative;
+    border-top: 3px solid green;
+}
+
+.timeline-bottom::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -12px;
+    border-radius: 100%;
+    background-color: green;
+}
+
+.card-row {
+    display: flex;
+    overflow-x: scroll;
+    perspective: 1000px;
+    margin-bottom: 2em;
+}
+
+.card-container {
+    display: flex;
+    flex: 0 0 24em;
+}
+
+.card-container:hover .card, .card-container.hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: lightgrey;
+
+    /* center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.card-background {
+    content: "";
+    background: #ffffff var(--background) no-repeat center;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+
+.card-front, .card-back {
+    backface-visibility: hidden;
+}
+
+.card-front {
+    padding: 10px;
+    position: absolute;
+
+    z-index: 2;
+    /* For firefox 31 */
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.fa-star {
+    color: #FFD700;
+    text-shadow: 0 0 3px #000;
+    padding-right: 5px;
+}
+
+.star-list {
+    text-align: left;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}

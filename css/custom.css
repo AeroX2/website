@@ -1,3 +1,38 @@
+body {
+    font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+b, h1, h2, h3 {
+    color: black;
+}
+
+.container {
+    max-width: 960px;
+}
+
+@media (min-width: 40.0rem) { 
+    .container {
+        width:85%;
+        padding: 0
+    }
+}
+
+@media (min-width: 80.0rem) { 
+    .container {
+        width:80%
+    }
+
+    .column,.columns {
+        margin-left: 4%
+    }
+
+    .column:first-child,.columns:first-child {
+        margin-left: 0
+    }
+}
+
+
 .list-no-space {
     margin-bottom: 0;
 }
@@ -140,9 +175,3 @@ body:not(.mobile) .footer-bottom {
     position: absolute;
     z-index: -1; 
 }
-
-/* @media (max-width: 750px) {
-    .container {
-        width: 85%;
-    }
-} */

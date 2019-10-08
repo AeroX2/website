@@ -1,10 +1,7 @@
 body {
+    color: black;
     font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-weight: 400;
-}
-
-b, h1, h2, h3 {
-    color: black;
 }
 
 .container {
@@ -196,7 +193,8 @@ body:not(.mobile) .footer-bottom {
 
 .test2::before {
     content: "";
-    background: url('../images/background.jpg') fixed center/cover;
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
     filter: blur(5px);
     opacity: 0.2;
 
@@ -219,7 +217,8 @@ body:not(.mobile) .footer-bottom {
 
 .test2-2::before {
     content: "";
-    background: url('../images/background-2.jpg') fixed center/cover;
+    background: url('../images/background-2.jpg') no-repeat center center;
+    background-size: cover;
     filter: blur(5px);
     opacity: 0.2;
 

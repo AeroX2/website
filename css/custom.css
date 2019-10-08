@@ -9,26 +9,30 @@ b, h1, h2, h3 {
 
 .container {
     max-width: 960px;
+
+    background-color: #fff;
 }
 
 @media (min-width: 40.0rem) { 
     .container {
         width:85%;
-        padding: 0
+        /* padding: 0 */
+        padding-left: 4em;
+        padding-right: 4em;
     }
 }
 
 @media (min-width: 80.0rem) { 
     .container {
-        width:80%
+        width: 80%;
     }
 
     .column,.columns {
-        margin-left: 4%
+        margin-left: 4%;
     }
 
     .column:first-child,.columns:first-child {
-        margin-left: 0
+        margin-left: 0;
     }
 }
 
@@ -138,7 +142,7 @@ body:not(.mobile) .card-container:hover .card {
 }
 
 body:not(.mobile) .footer-bottom {
-    margin-bottom: 5em;
+    padding-bottom: 5em;
 }
 
 .konami-green {
@@ -163,15 +167,71 @@ body:not(.mobile) .footer-bottom {
     opacity: 0.3;
 }
 
-#test::before {
+@media (min-width: 40.0rem) { 
+    #test::before {
+        content: "";
+        background: url('../images/background.jpg') center/cover no-repeat;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        z-index: -1; 
+        filter: blur(5px);
+    }
+}
+
+.trans {
+    background-color: transparent;
+}
+
+.white {
+    background-color: white;
+}
+
+.test2 {
+    position: relative;
+}
+
+.test2::before {
     content: "";
-    /* background: #ffffff url('../images/background.jpg') no-repeat; */
-    background-size: contain;
+    background: url('../images/background.jpg') fixed center/cover;
+    filter: blur(5px);
     opacity: 0.2;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+
     position: absolute;
-    z-index: -1; 
+    width: 100%;
+    height: 98%;
+
+    /* height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: -3; */
+}
+
+.test2-2 {
+    position: relative;
+}
+
+.test2-2::before {
+    content: "";
+    background: url('../images/background-2.jpg') fixed center/cover;
+    filter: blur(5px);
+    opacity: 0.2;
+
+    position: absolute;
+    width: 100%;
+    height: 98%;
+
+    /* height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: -1; */
 }

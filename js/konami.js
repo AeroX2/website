@@ -56,8 +56,8 @@ function autorun() {
             else if (ev.key === "ArrowDown") trans = "down";
             else if (ev.key === "ArrowLeft") trans = "left";
             else if (ev.key === "ArrowRight") trans = "right";
-            else if (ev.key === "a") trans = "a";
-            else if (ev.key === "b") trans = "b";
+            else if (ev.key === "a" || ev.key === "A") trans = "a";
+            else if (ev.key === "b" || ev.key === "B") trans = "b";
             check(trans);
         })
     }

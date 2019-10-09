@@ -234,3 +234,7 @@ body:not(.mobile) .footer-bottom {
     will-change: transform;
     z-index: -1; */
 }
+
+.fixed::before {
+    background-attachment: fixed;
+}

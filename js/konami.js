@@ -12,7 +12,7 @@ function check(trans) {
 
         konamiIndex++;
         if (konamiIndex === KONAMI.length) {
-            window.alert("Konami");
+            window.alert("Coming soon ;P");
         }
     } else {
         for (let child of konamiSymbols.children) child.classList.remove("konami-green");

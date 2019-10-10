@@ -45,15 +45,44 @@ body {
 }
 
 .card-row {
+    scroll-snap-type: x mandatory;
     display: flex;
     overflow-x: scroll;
     perspective: 1000px;
     margin-bottom: 2em;
 }
 
+.btn {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 30px;
+  width: 30px;
+
+  border-radius: 2px;
+  background-color: rgba(0,0,0,0.5);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  z-index: 1;
+}
+
+.btn.next {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+  right: 10px;
+}
+
+.btn.prev {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+  left: 10px;
+}
+
 .card-container {
     display: flex;
     flex: 0 0 24em;
+    scroll-snap-align: center;
 }
 
 body:not(.mobile) .card-container:hover .card {
@@ -176,9 +205,6 @@ body:not(.mobile) .footer-bottom {
 .top {
     box-shadow:
         inset 0px -25px 8px -10px white;
-}
-
-.top {
     clip: rect(0px, auto, 800px, auto);
 }
 
@@ -204,4 +230,43 @@ body:not(.mobile) .footer-bottom {
     width: 100%;
     will-change: transform;
     z-index: -1;
+}
+
+.r {
+    color: red;
+}
+
+.g {
+    color: green;
+}
+
+.b {
+    color: blue;
+}
+
+.o {
+    color: orange;
+}
+
+.w {
+    color: white;
+}
+
+.y {
+    color: yellow;
+}
+
+.oo {
+    color: #ff6e40;
+}
+
+.bb {
+    color: #3382b3;
+}
+
+.r, .g, .b, .o, .w, .y, .oo, .bb {
+    text-shadow: -1px 0 lightgrey,
+                 0 1px  lightgrey,
+                 1px 0  lightgrey,
+                 0 -1px lightgrey;
 }

@@ -30,23 +30,28 @@ function autorun() {
         touch.setAttribute("id", "touch-area");
         document.body.appendChild(touch);
 
-        let hammer = Hammer(touch);
-        hammer.get("swipe").set({ direction: Hammer.DIRECTION_ALL });
-
-        var doubleTap = new Hammer.Tap({
-            event: 'doubletap',
-            pointers: 2
+        let hammer = new Hammer.Manager(touch, {
+            recognizers: [
+                [Hammer.Pinch,{ enable: true }],
+                [Hammer.Tap,{ event: 'doubletap', taps: 2 }],
+                [Hammer.Tap,{ event: 'singletap' }],
+                [Hammer.Swipe,{ direction: Hammer.DIRECTION_ALL }],
+            ]
         });
-        hammer.add(doubleTap);
+        hammer.get('doubletap').recognizeWith('singletap');
+        hammer.get('doubletap').requireFailure('pinch');
+        hammer.get('singletap').requireFailure('doubletap');
 
-        hammer.on("swipeup swipedown swipeleft swiperight tap doubletap", (ev) => {
+        hammer.on("swipeup swipedown swipeleft swiperight singletap doubletap pinchstart", (ev) => {
             let trans = "";
             if (ev.type === "swipeup") trans = "up";
             else if (ev.type === "swipedown") trans = "down";
             else if (ev.type === "swipeleft") trans = "left";
             else if (ev.type === "swiperight") trans = "right";
-            else if (ev.type === "tap") trans = "a";
+            else if (ev.type === "singletap") trans = "a";
             else if (ev.type === "doubletap") trans = "b";
+            else if (ev.type === "pinchstart") trans = "b";
+
             check(trans);
         })
     } else {

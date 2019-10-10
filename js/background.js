@@ -12,7 +12,7 @@ function autorun() {
     }
 
     recalc();
-    document.addEventListener('wheel', recalc, { capture: false, passive: true })
+    document.addEventListener('scroll', recalc, { capture: false, passive: true })
 
     const cards = document.querySelector('.card-row');
     const card_size = document.querySelector('.card-container').clientWidth;

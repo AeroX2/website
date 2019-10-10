@@ -125,7 +125,9 @@ body:not(.mobile) .card-container:hover .card {
 
 .card-background {
     content: "";
-    background: #ffffff var(--cardBackground) no-repeat center;
+    /* background: #ffffff var(--cardBackground) no-repeat center; */
+    background-repeat: no-repeat;
+    background-position: center;
     opacity: 0.2;
     top: 0;
     left: 0;
@@ -213,7 +215,9 @@ body:not(.mobile) .footer-bottom {
 }
 
 .top, .bottom {
-    background: var(--background) no-repeat center center;
+    /* background: var(--background) no-repeat center center; */
+    background-repeat: no-repeat;
+    background-position: center;
     /* background-attachment: fixed; */
     background-size: cover;
     filter: blur(5px);
@@ -223,10 +227,11 @@ body:not(.mobile) .footer-bottom {
     width: 100%;
     height: 98%; */
 
-    height: 100%;
-    left: 0;
-    position: fixed;
     top: 0;
+    left: 0;
+    height: 100%;
+
+    position: fixed;
     width: 100%;
     will-change: transform;
     z-index: -1;
